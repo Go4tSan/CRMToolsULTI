@@ -2,12 +2,12 @@
 
 <!--INICIO del cont principal-->
 <div class="container">
-    <h1>Contenido principal</h1>
+    <h1>DASHBOARD</h1>
     
-    
+ <!--INICIO del cont principal-->   
     
  <?php
-include_once '../bd/conexion.php';
+include_once 'bd/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
@@ -16,7 +16,6 @@ $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
 
 <div class="container">
         <div class="row">
@@ -34,10 +33,13 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                         <thead class="text-center">
                             <tr>
                                 <th>Id</th>
-                                <th>Nombre</th>
-                                <th>País</th>                                
-                                <th>Edad</th>  
+                                <th>recibido</th>
+                                <th>cierre</th>                                
+                                <th>dias</th>  
+                                <th>estado</th>
+                                <th>observaciones</th>
                                 <th>Acciones</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -46,15 +48,16 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                             ?>
                             <tr>
                                 <td><?php echo $dat['id'] ?></td>
-                                <td><?php echo $dat['nombre'] ?></td>
-                                <td><?php echo $dat['pais'] ?></td>
-                                <td><?php echo $dat['edad'] ?></td>    
-                                <td></td>
+                                <td><?php echo $dat['f_recibido'] ?></td>
+                                <td><?php echo $dat['f_cierre'] ?></td>
+                                <td><?php echo $dat['dias'] ?></td>
+                                <td><?php echo $dat['estado'] ?></td>    
+                                <td><?php echo $dat['observaciones'] ?></td>        
                             </tr>
                             <?php
                                 }
-                            ?>                                
-                        </tbody>        
+                            ?> 
+        </tbody>        
                        </table>                    
                     </div>
                 </div>
@@ -73,7 +76,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
         <form id="formPersonas">    
             <div class="modal-body">
                 <div class="form-group">
-                <label for="nombre" class="col-form-label">Nombre:</label>
+                <label for="f_recibido" class="col-form-label">recibido:</label>
                 <input type="text" class="form-control" id="nombre">
                 </div>
                 <div class="form-group">
@@ -92,10 +95,8 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
         </form>    
         </div>
     </div>
-</div>  
-      
-    
-    
+</div>      
 </div>
+ 
 <!--FIN del cont principal-->
 <?php require_once "vistas/parte_inferior.php"?>

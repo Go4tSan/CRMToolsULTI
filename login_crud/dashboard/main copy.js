@@ -76,7 +76,7 @@ $(document).on("click", ".btnBorrar", function(){
     
 $("#formPersonas").submit(function(e){
     e.preventDefault();    
-    f_recibido = $.trim($("#f_recibido").val());
+    nombre = $.trim($("#nombre").val());
     pais = $.trim($("#pais").val());
     edad = $.trim($("#edad").val());    
     $.ajax({

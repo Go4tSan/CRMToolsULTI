@@ -40,8 +40,9 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `usuario`, `password`) VALUES
 (1, 'admin', '827ccb0eea8a706c4c34a16891f84e7b'),
-(2, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229');
-
+(2, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229'),
+(3, 'admin@1', '827ccb0eea8a706c4c34a16891f84e7b'),
+(4, '1@1', 'c4ca4238a0b923820dcc509a6f75849b');
 --
 -- Índices para tablas volcadas
 --

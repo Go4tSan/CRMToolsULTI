@@ -39,7 +39,7 @@ require_once "../bd/sesion.php"; /* todos los modulos que usen esta platilla ted
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
-        <img src="../img/crm.png" alt="CRMTools" width="50" height="50">
+        <img src="img/crm.png" alt="CRMTools" width="50" height="50">
         </div>
         <div class="sidebar-brand-text mx-3">CRM <sup>Tools</sup></div>
       </a>
