@@ -27,10 +27,10 @@ if($_SESSION["s_usuario"] === null){
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!--datables CSS básico-->
-    <link rel="stylesheet" type="text/css" href="vendor/datatables/datatables.min.css"/>
-    <!--datables estilo bootstrap 4 CSS-->  
-    <link rel="stylesheet"  type="text/css" href="vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-- cdn icnonos-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     
 </head>
 
@@ -77,7 +77,7 @@ if($_SESSION["s_usuario"] === null){
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Gestionar Información:</h6>
-            <a class="collapse-item" href="buttons.php">Buttons</a>
+            <a class="collapse-item" href="blank.php">Blank</a>
             <a class="collapse-item" href="blank.php">Blank Page</a>
             <a class="collapse-item" href="cards.php">Cards</a>
           </div>
