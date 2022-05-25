@@ -1,4 +1,4 @@
-<?php include 'template/header.php' ?>
+<?php require_once "vistas/parte_superior.php"?>
 
 <?php
     if(!isset($_GET['id'])){
@@ -24,19 +24,29 @@
                 </div>
                 <form class="p-4" method="POST" action="editarProceso.php">
                     <div class="mb-3">
-                        <label class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" name="txtNombre" required 
-                        value="<?php echo $persona->nombre; ?>">
+                        <label class="form-label">Fecha de recibido: </label>
+                        <input type="date" class="form-control" name="txtRecibido" required 
+                        value="<?php echo $persona->recibido; ?>">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Edad: </label>
-                        <input type="number" class="form-control" name="txtEdad" autofocus required
-                        value="<?php echo $persona->edad; ?>">
+                        <label class="form-label">Fecha de cierre: </label>
+                        <input type="date" class="form-control" name="txtCierre" autofocus required
+                        value="<?php echo $persona->cierre; ?>">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Signo: </label>
-                        <input type="text" class="form-control" name="txtSigno" autofocus required
-                        value="<?php echo $persona->signo; ?>">
+                        <label class="form-label">Dias: </label>
+                        <input type="text" class="form-control" name="txtDias" autofocus required
+                        value="<?php echo $persona->dias; ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Estado: </label>
+                        <input type="text" class="form-control" name="txtEstado" autofocus required
+                        value="<?php echo $persona->estado; ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Observaciones: </label>
+                        <input type="text" class="form-control" name="txtObservaciones" autofocus required
+                        value="<?php echo $persona->observaciones; ?>">
                     </div>
                     <div class="d-grid">
                         <input type="hidden" name="id" value="<?php echo $persona->id; ?>">
@@ -48,4 +58,4 @@
     </div>
 </div>
 
-<?php include 'template/footer.php' ?>
+<?php require_once "vistas/parte_inferior.php"?>

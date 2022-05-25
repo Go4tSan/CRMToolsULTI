@@ -82,16 +82,18 @@
             <!-- fin alerta -->
             <div class="card">
                 <div class="card-header">
-                    Lista de personas
+                    Lista de Reportes
                 </div>
                 <div class="p-4">
                     <table class="table align-middle">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Edad</th>
-                                <th scope="col">Signo</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Fecha recibido</th>
+                                <th scope="col">Fecha cierre</th>
+                                <th scope="col">dias</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Observaciones</th>
                                 <th scope="col" colspan="2">Opciones</th>
                             </tr>
                         </thead>
@@ -103,9 +105,11 @@
 
                             <tr>
                                 <td scope="row"><?php echo $dato->id; ?></td>
-                                <td><?php echo $dato->nombre; ?></td>
-                                <td><?php echo $dato->edad; ?></td>
-                                <td><?php echo $dato->signo; ?></td>
+                                <td><?php echo $dato->recibido; ?></td>
+                                <td><?php echo $dato->cierre ?></td>
+                                <td><?php echo $dato->dias; ?></td>
+                                <td><?php echo $dato->estado; ?></td>
+                                <td><?php echo $dato->observaciones; ?></td>
                                 <td><a class="text-success" href="editar.php?id=<?php echo $dato->id; ?>"><i class="bi bi-pencil-square"></i></a></td>
                                 <td><a onclick="return confirm('Estas seguro de eliminar?');" class="text-danger" href="eliminar.php?id=<?php echo $dato->id; ?>"><i class="bi bi-trash"></i></a></td>
                             </tr>
@@ -127,20 +131,30 @@
                 </div>
                 <form class="p-4" method="POST" action="registrar.php">
                     <div class="mb-3">
-                        <label class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" name="txtNombre" autofocus required>
+                        <label class="form-label">Fecha recibido: </label>
+                        <input type="date" class="form-control" name="txtRecibido" autofocus required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Edad: </label>
-                        <input type="number" class="form-control" name="txtEdad" autofocus required>
+                        <label class="form-label">Fecha cierre: </label>
+                        <input type="date" class="form-control" name="txtCierre" autofocus required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Signo: </label>
-                        <input type="text" class="form-control" name="txtSigno" autofocus required>
+                        <label class="form-label">Dias: </label>
+                        <input type="text" class="form-control" name="txtDias" autofocus required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Estado: </label>
+                        <input type="text" class="form-control" name="txtEstado" autofocus required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Observaciones: </label>
+                        <input type="text" class="form-control" name="txtObservaciones" autofocus required>
                     </div>
                     <div class="d-grid">
                         <input type="hidden" name="oculto" value="1">
                         <input type="submit" class="btn btn-primary" value="Registrar">
+                        <br>
+                        <a href="./excel.php" class="btn btn-success"> Descargar excel</a>
                     </div>
                 </form>
             </div>
@@ -148,7 +162,8 @@
     </div>
 </div>
 
-
+<br><br>
+<a href="./excel.php" class btn small blue></a>
 
 
 <!--FIN del cont principal-->
