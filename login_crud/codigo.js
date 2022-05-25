@@ -29,8 +29,8 @@ $('#formLogin').submit(function(e){
                        confirmButtonText:'Ingresar'
                    }).then((result) => {
                        if(result.value){
-                           //window.location.href = "vistas/pag_inicio.php";
-                           window.location.href = "dashboard/index.php";
+                          // window.location.href = "vistas/pag_inicio.php";
+                           window.location.href = "dashboard/index2.php";
                        }
                    })
                    
