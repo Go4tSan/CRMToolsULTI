@@ -16,7 +16,7 @@ if(empty($_SESSION["usuario"])){
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>CRMTools - Dashboard</title>
+  <title>CRMTools</title>
 
   <!-- Custom fonts for this template-->
   <link href="Assets/Estilos/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -54,8 +54,8 @@ if(empty($_SESSION["usuario"])){
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="DashBoard">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard </span></a>
+          <i class="bi bi-flag-fill"></i>
+          <span>REPORTES</span></a>
       </li>
 
       <!-- Divider -->
@@ -70,14 +70,13 @@ if(empty($_SESSION["usuario"])){
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Gestionar Informacion</span>
+          <span>MODULOS</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Gestionar Información:</h6>
-           <?php if ($_SESSION['Tipo_Usuario'] == 'Admin'){?><a class="collapse-item" href="Blank">Blank</a> <?php }?>
-            <a class="collapse-item" href="formato">Formatos</a>
-            <a class="collapse-item" href="cards.php">Cards</a>
+            <h6 class="collapse-header">MODULOS</h6>
+          <a class="collapse-item" href="Blank">PQR</a> 
+          <a class="collapse-item" href="formato">Formatos</a>
           </div>
         </div>
       </li>
@@ -85,16 +84,16 @@ if(empty($_SESSION["usuario"])){
   <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Usuarios</span>
+                    <i class="bi bi-people-fill"></i>
+                    <span>USUARIOS</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
+                        <h6 class="collapse-header">LPERFIL</h6>
                         <a class="collapse-item" href="Perfil">Perfil</a>
                         <div class="collapse-divider"></div>
-                        <?php if ($_SESSION['Tipo_Usuario'] == 'Admin'){?>  <h6 class="collapse-header">Other Pages:</h6><?php }?>
-                        <?php if ($_SESSION['Tipo_Usuario'] == 'Admin'){?><a class="collapse-item" href="PerfilR">Registro Usuarios</a> <?php }?>
+                        <h6 class="collapse-header">REGISTRO</h6>
+                        <a class="collapse-item" href="PerfilR">Registro Usuarios</a>
                     </div>
                 </div>
             </li>

@@ -68,7 +68,7 @@ public function editarU(int $id)
    return $data;
 }
 
-public function ActualizarU(int $ID,string $Recibido, string $Cierre, int $Dias, string $Estado, string $Observaciones){
+public function ActualizarUs(int $ID,string $Recibido, string $Cierre, int $Dias, string $Estado, string $Observaciones){
 
   $this->ID = $ID;
   $this->Recibido = $Recibido;

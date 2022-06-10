@@ -3,7 +3,7 @@
 
 <!--INICIO del cont principal-->
 <div class="container">
-    <h1>DASHBOARD</h1>
+    <h1>REPORTES</h1>
     
  <!--INICIO del cont principal-->   
     
@@ -19,11 +19,11 @@
             <!-- fin alerta -->
             <div class="card">
                 <div class="card-header">
-                    Lista de Reportes
+                  <h6>  Lista de Reportes</h6>
                 </div>
                 <div id ="tabla">
                 <div class="table-responsive">
-                <div class="p-4" id="recarga">
+                <div class="p-3" id="recarga">
                 
                     <table class="table align-middle">
                         <thead>
@@ -34,8 +34,8 @@
                                 <th scope="col">Días</th>
                                 <th scope="col">Estado</th>
                                 <th scope="col">Observaciones</th>
-                                <div class="card-header">    <h7>Panel <?php echo $_SESSION['Tipo_Usuario']; ?> </h7>       </div>     
-                                <th scope="col" colspan="2">Opciones</th> <?php  ?>
+                     <h7>Panel <?php echo $_SESSION['Tipo_Usuario']; ?>     </h7>     
+                      <?php  if($_SESSION['Tipo_Usuario'] != "Admin"){ ?>   <th scope="col" colspan="2">Opciones</th> <?php } ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -58,8 +58,8 @@
                                 <td> <?php echo $Dias ?> </td>
                                 <td> <?php echo $Estado ?> </td>
                                 <td> <?php echo $Observaciones ?> </td>
-                                <td><a class="text-primary" onclick="EditarU(<?php echo $id ?>);"><i class="bi bi-pencil-square"></i></a></td>
-                                <td><?php  if($_SESSION['Tipo_Usuario'] == "Admin"){ ?><a onclick="EliminarU(<?php echo $id ?>);" class="text-danger"><i class="bi bi-trash"></i></a><?php }?></td>
+                                <td><?php  if($_SESSION['Tipo_Usuario'] != "Admin"){ ?><a class="text-primary" onclick="EditarU(<?php echo $id ?>);"><i class="bi bi-pencil-square"></i><?php }?></a></td>
+                                <td></td>
                             </tr>
                           <?php } ?>
                         </form>
@@ -113,7 +113,7 @@
                 <div class="card-header">
                     Editar datos:
                 </div>
-                <form class="p-4" method="POST" id="frmActualizarU" >
+                <form class="p-4" method="POST" id="frmActual" >
                 <div class="mb-3">
                         <label class="form-label">ID: </label>
                         <input type="text" class="form-control" name="ID" id="ID" disabled>
@@ -152,6 +152,7 @@
 </div>
 
 <br><br>
+
 
 
 

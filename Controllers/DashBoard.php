@@ -58,7 +58,7 @@ class DashBoard extends Controller{
       $Dias = $_POST['txtDiasU'];
       $Estado = $_POST['txtEstadoU'];
       $Observaciones = $_POST['txtObservacionesU'];
-      $data=$this->model->ActualizarU($ID,$Recibido,$Cierre,$Dias,$Estado,$Observaciones);
+      $data=$this->model->ActualizarUs($ID,$Recibido,$Cierre,$Dias,$Estado,$Observaciones);
       if ($data == "ok") {
          $msg ="si";
         }else{
